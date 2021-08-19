@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import GuessAgeScreen from './Screen/GuessAgeScreen';
+import GuessNationalScreen from './Screen/GuessNationalScreen';
 
 function HomeScreen() {
   return (
@@ -33,7 +34,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Guess National" component={GuessAgeScreen} options={{
+        <Tab.Screen name="Guess National" component={GuessNationalScreen} options={{
           tabBarLabel: 'National',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="flag" color={color} size={size} />
@@ -58,6 +59,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor : 'red',
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
